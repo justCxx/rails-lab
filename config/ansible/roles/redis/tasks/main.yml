@@ -1,0 +1,7 @@
+- name: install
+  apt: name=redis-server state=present update_cache=yes
+  become: yes
+  notify:
+    - restart redis-server
+
+- meta: flush_handlers

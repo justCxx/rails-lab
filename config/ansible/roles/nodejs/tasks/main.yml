@@ -1,0 +1,6 @@
+- name: install
+  apt: name={{ item }} state=latest update_cache=yes
+  with_items:
+    - "nodejs"
+    - "nodejs-legacy"
+  become: yes

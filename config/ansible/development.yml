@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  roles:
+    - nodejs
+    - postgresql
+    - redis
+    - ruby
