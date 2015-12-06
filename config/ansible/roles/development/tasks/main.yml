@@ -1,0 +1,5 @@
+- include: os_packages.yml
+
+- name: gem mailcatcher
+  gem: name=mailcatcher user_install=no state=latest
+  become: yes
