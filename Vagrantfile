@@ -10,7 +10,8 @@ Vagrant.configure(2) do |config|
   config.vm.box_check_update = false
   config.ssh.forward_agent = true
 
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 3000, host: 3000 # rails server
+  config.vm.network "forwarded_port", guest: 1080, host: 1080 # mailcatcher
   config.vm.network "private_network", type: "dhcp"
 
   config.vm.synced_folder ".", "/home/vagrant/app", type: "nfs"
