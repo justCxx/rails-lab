@@ -8,7 +8,8 @@ class VisitorsController < ApplicationController
       email: params[:person][:email],
       message: params[:person][:message])
 
-    PostmanWorker.perform_async(h, 5)
+    PostmanWorker.perform_async(h)
+    ExampleJob.perform_later(h)
 
     redirect_to :root
   end
