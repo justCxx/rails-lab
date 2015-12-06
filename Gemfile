@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # DelayedJob backend
 gem 'sidekiq'
+gem 'sidekiq-statistic'
 gem 'sinatra', require: nil
 
 group :development, :test do
