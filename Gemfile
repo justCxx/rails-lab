@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# DelayedJob backend
+gem 'sidekiq'
+gem 'sinatra', require: nil
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'
