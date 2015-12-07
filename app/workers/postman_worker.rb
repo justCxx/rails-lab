@@ -3,6 +3,6 @@ class PostmanWorker
 
   def perform(h)
     h = JSON.load(h)
-    VisitorMailer.contact_email(h["name"], h["email"], h["message"]).deliver
+    VisitorMailer.contact_email(h["name"], h["email"], "sidekiq: #{h['message']}").deliver
   end
 end
