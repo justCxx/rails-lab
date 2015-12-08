@@ -7,7 +7,9 @@
 # you're doing.
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
+  config.vm.hostname = "rails-lab-vm"
   config.vm.box_check_update = false
+
   config.ssh.forward_agent = true
 
   config.vm.network "forwarded_port", guest: 3000, host: 3000 # rails server
