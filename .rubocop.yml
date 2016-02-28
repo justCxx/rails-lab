@@ -5,3 +5,5 @@ AllCops:
     - "spec/*_helper.rb"
     - "bin/*"
   UseCache: false
+  DisplayCopNames: true
+  DisplayStyleGuide: true
