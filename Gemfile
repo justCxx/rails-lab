@@ -1,4 +1,3 @@
-# rubocop:disable Style/StringLiterals
 source 'https://rubygems.org'
 ruby '2.2.3'
 
@@ -30,9 +29,11 @@ gem 'sidekiq-statistic'
 gem 'sinatra', require: nil
 
 group :development, :test do
-  gem 'byebug'
   gem 'pry'
+  gem 'pry-byebug'
   gem 'awesome_print'
+  gem 'pronto'
+  gem 'pronto-rubocop'
 end
 
 group :development do
