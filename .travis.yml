@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+    - 2.2.3
+
+cache: bundler
+
+env:
+  PULL_REQUEST_ID=$TRAVIS_PULL_REQUEST
+
+script:
+    - bundle exec rake codereview
+
+notifications:
+    email: false

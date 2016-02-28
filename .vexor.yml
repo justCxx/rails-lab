@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+    - 2.2.3
+
+env:
+  PULL_REQUEST_ID=$CI_PULL_REQUEST_ID
+
+script:
+    - bundle exec rake codereview
+
+notifications:
+    email: false
